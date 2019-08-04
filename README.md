@@ -20,6 +20,9 @@ Click on any book to see its details.
 At the top of the detail, two button "Update" and "delete"
 are given.
 
+## Ice and fire books
+Click on the Ice and fire in the navigation bar to see the books of Ice and fire api.
+
 ## Api Service
 *api.service.ts* file is responsible for making request to the backend.
 In this file I have setup baseUrl to http://localhost:8080/
