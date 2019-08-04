@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-xs-6">
+        <button class="btn btn-success" (click)="onEditRecipe()">Edit Book</button>
+        <button class="btn btn-danger" (click)="onDeleteRecipe()">Delete Book</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{ book.name }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        Pubisher: {{ book.publisher }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        Country: {{ book.country }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        Release on: {{ book.release_date }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        Authors:
+        <ul class="list-group">
+            <li
+                    class="list-group-item"
+                    *ngFor="let author of book.authors">
+                {{author }}
+            </li>
+        </ul>
+    </div>
+</div>

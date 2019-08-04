@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-xs-12">
+        <app-ice-and-fire-book
+                *ngFor="let book of books; let i = index"
+                [book]="book"
+                [index]="i">
+        </app-ice-and-fire-book>
+    </div>
+</div>
