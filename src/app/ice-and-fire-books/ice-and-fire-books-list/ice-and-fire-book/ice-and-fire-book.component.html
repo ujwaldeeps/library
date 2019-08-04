@@ -4,6 +4,11 @@
         class="list-group-item clearfix">
     <div class="pull-left">
         <h4 class="list-group-item-heading">{{ book.name }}</h4>
+        <p class="list-group-item-text">Pages: {{ book.number_of_pages }}</p>
+        <p class="list-group-item-text">Isbn: {{ book.isbn }}</p>
         <p class="list-group-item-text">Published by: {{ book.publisher }}</p>
+        <p class="list-group-item-text">Country: {{ book.country }}</p>
+        <p class="list-group-item-text">Released on: {{ book.release_date }}</p>
+        <p class="list-group-item-text">Written by: {{ book.authors.join(', ') }}</p>
     </div>
 </a>
