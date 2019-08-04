@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import {ApiService} from "../apis/api.service";
 
 @Injectable()
 export class IceAndFireBooksService {
     iceAndFireBooksChanged = new Subject<any>();
     private iceAndFireBooks: any = [];
 
-    constructor() {}
+    constructor(private apiService: ApiService) {}
 
     setBooks(books: any) {
         this.iceAndFireBooks = books;
@@ -15,6 +16,10 @@ export class IceAndFireBooksService {
 
     getBooks() {
         return this.iceAndFireBooks.slice();
+    }
+
+    getBook(name: string) {
+        return this.apiService.getIceAndFireBooksByName(name);
     }
 
 }

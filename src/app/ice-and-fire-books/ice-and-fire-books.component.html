@@ -1,1 +1,11 @@
+<div class="row">
+    <div class="col-xs-8">
+        <input type="text" #nameOfBook class="form-control"/>
+    </div>
+
+    <div class="col-xs-4">
+        <button class="btn btn-success" (click)="searchBook(nameOfBook.value)">Search</button>
+    </div>
+
+</div>
 <app-ice-and-fire-books-list></app-ice-and-fire-books-list>

@@ -9,6 +9,15 @@ export class ApiService {
         return this.http.get( this.baseUrl + '/external-books');
     }
 
+    getIceAndFireBooksByName(name) {
+        return this.http.get( this.baseUrl + '/external-books', {
+            params: {
+                name
+            }
+        });
+    }
+
+
     getBooks() {
         return this.http.get( this.baseUrl + '/v1/books');
     }
